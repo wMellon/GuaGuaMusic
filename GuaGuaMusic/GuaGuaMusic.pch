@@ -1,0 +1,19 @@
+//
+//  呱呱音乐.pch
+//  呱呱音乐
+//
+//  Created by xxb on 15/12/15.
+//  Copyright © 2015年 xxb. All rights reserved.
+//
+
+#ifndef _____pch
+#define _____pch
+
+#import "Common.h"
+
+#import "NSString+Common.h"
+
+#import "UIView+Frame.h"
+#import "UIViewController+MBProgressHUD.h"
+
+#endif /* _____pch */

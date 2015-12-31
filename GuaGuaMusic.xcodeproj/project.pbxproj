@@ -1,0 +1,805 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DFE8F906ED951601F8BC4CF9 /* libPods-GuaGuaMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FABF5C0BD913F914292104 /* libPods-GuaGuaMusic.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		F13944861C321E3400387C10 /* ResponseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F13944851C321E3400387C10 /* ResponseViewModel.m */; };
+		F13C9DFA1C21504400F2A0AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9DF91C21504400F2A0AE /* main.m */; };
+		F13C9DFD1C21504400F2A0AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9DFC1C21504400F2A0AE /* AppDelegate.m */; };
+		F13C9E051C21504400F2A0AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E041C21504400F2A0AE /* Assets.xcassets */; };
+		F13C9E131C21504400F2A0AE /* GuaGuaMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E121C21504400F2A0AE /* GuaGuaMusicTests.m */; };
+		F13C9E1E1C21504400F2A0AE /* GuaGuaMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E1D1C21504400F2A0AE /* GuaGuaMusicUITests.m */; };
+		F13C9E591C2150F000F2A0AE /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E2F1C2150F000F2A0AE /* NSString+Common.m */; };
+		F13C9E5A1C2150F000F2A0AE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E321C2150F000F2A0AE /* UIView+Frame.m */; };
+		F13C9E5B1C2150F000F2A0AE /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E371C2150F000F2A0AE /* ArtistsTableViewController.m */; };
+		F13C9E5C1C2150F000F2A0AE /* LrcRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E391C2150F000F2A0AE /* LrcRemoteViewController.m */; };
+		F13C9E5D1C2150F000F2A0AE /* LrcRemoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E3A1C2150F000F2A0AE /* LrcRemoteViewController.xib */; };
+		F13C9E5E1C2150F000F2A0AE /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E3C1C2150F000F2A0AE /* SearchViewController.m */; };
+		F13C9E5F1C2150F000F2A0AE /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E3E1C2150F000F2A0AE /* SongsTableViewController.m */; };
+		F13C9E601C2150F000F2A0AE /* MusicNetKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E421C2150F000F2A0AE /* MusicNetKit.m */; };
+		F13C9E611C2150F000F2A0AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E441C2150F000F2A0AE /* Default-568h@2x.png */; };
+		F13C9E621C2150F000F2A0AE /* lastSong.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E461C2150F000F2A0AE /* lastSong.png */; };
+		F13C9E631C2150F000F2A0AE /* lastSong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E471C2150F000F2A0AE /* lastSong@2x.png */; };
+		F13C9E641C2150F000F2A0AE /* nextSong.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E481C2150F000F2A0AE /* nextSong.png */; };
+		F13C9E651C2150F000F2A0AE /* nextSong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E491C2150F000F2A0AE /* nextSong@2x.png */; };
+		F13C9E661C2150F000F2A0AE /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E4A1C2150F000F2A0AE /* pause.png */; };
+		F13C9E671C2150F000F2A0AE /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E4B1C2150F000F2A0AE /* pause@2x.png */; };
+		F13C9E681C2150F000F2A0AE /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E4C1C2150F000F2A0AE /* play.png */; };
+		F13C9E691C2150F000F2A0AE /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E4D1C2150F000F2A0AE /* play@2x.png */; };
+		F13C9E6A1C2150F000F2A0AE /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E4E1C2150F000F2A0AE /* stop.png */; };
+		F13C9E6B1C2150F000F2A0AE /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F13C9E4F1C2150F000F2A0AE /* stop@2x.png */; };
+		F13C9E6C1C2150F000F2A0AE /* GGArtistViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E521C2150F000F2A0AE /* GGArtistViewModel.m */; };
+		F13C9E6D1C2150F000F2A0AE /* GGSongViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E541C2150F000F2A0AE /* GGSongViewModel.m */; };
+		F13C9E6E1C2150F000F2A0AE /* XBSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F13C9E571C2150F000F2A0AE /* XBSlidingViewController.m */; };
+		F1BE3B491C2D157F00AE6647 /* GlobalPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BE3B481C2D157F00AE6647 /* GlobalPlayer.m */; };
+		F1DAE9C51C30D35800D9D50D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DAE9C31C30D2C400D9D50D /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F1DAE9CB1C31198300D9D50D /* SongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DAE9CA1C31198300D9D50D /* SongModel.m */; };
+		F1DAE9CE1C3123F100D9D50D /* UIViewController+MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DAE9CD1C3123F100D9D50D /* UIViewController+MBProgressHUD.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F13C9E0F1C21504400F2A0AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F13C9DED1C21504400F2A0AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F13C9DF41C21504400F2A0AE;
+			remoteInfo = GuaGuaMusic;
+		};
+		F13C9E1A1C21504400F2A0AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F13C9DED1C21504400F2A0AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F13C9DF41C21504400F2A0AE;
+			remoteInfo = GuaGuaMusic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38FABF5C0BD913F914292104 /* libPods-GuaGuaMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuaGuaMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50041070E5C75494BCD26E16 /* Pods-GuaGuaMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuaGuaMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuaGuaMusic/Pods-GuaGuaMusic.release.xcconfig"; sourceTree = "<group>"; };
+		AA9B77D2A12534FE9199AB6D /* Pods-GuaGuaMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuaGuaMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuaGuaMusic/Pods-GuaGuaMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		F13944841C321E3400387C10 /* ResponseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseViewModel.h; sourceTree = "<group>"; };
+		F13944851C321E3400387C10 /* ResponseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseViewModel.m; sourceTree = "<group>"; };
+		F13C9DF51C21504400F2A0AE /* GuaGuaMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuaGuaMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13C9DF91C21504400F2A0AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F13C9DFB1C21504400F2A0AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F13C9DFC1C21504400F2A0AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F13C9E041C21504400F2A0AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F13C9E091C21504400F2A0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F13C9E0E1C21504400F2A0AE /* GuaGuaMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuaGuaMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13C9E121C21504400F2A0AE /* GuaGuaMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuaGuaMusicTests.m; sourceTree = "<group>"; };
+		F13C9E141C21504400F2A0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F13C9E191C21504400F2A0AE /* GuaGuaMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuaGuaMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13C9E1D1C21504400F2A0AE /* GuaGuaMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuaGuaMusicUITests.m; sourceTree = "<group>"; };
+		F13C9E1F1C21504400F2A0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F13C9E2E1C2150F000F2A0AE /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
+		F13C9E2F1C2150F000F2A0AE /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
+		F13C9E311C2150F000F2A0AE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		F13C9E321C2150F000F2A0AE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		F13C9E341C2150F000F2A0AE /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		F13C9E361C2150F000F2A0AE /* ArtistsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistsTableViewController.h; sourceTree = "<group>"; };
+		F13C9E371C2150F000F2A0AE /* ArtistsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistsTableViewController.m; sourceTree = "<group>"; };
+		F13C9E381C2150F000F2A0AE /* LrcRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LrcRemoteViewController.h; sourceTree = "<group>"; };
+		F13C9E391C2150F000F2A0AE /* LrcRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LrcRemoteViewController.m; sourceTree = "<group>"; };
+		F13C9E3A1C2150F000F2A0AE /* LrcRemoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LrcRemoteViewController.xib; sourceTree = "<group>"; };
+		F13C9E3B1C2150F000F2A0AE /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F13C9E3C1C2150F000F2A0AE /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		F13C9E3D1C2150F000F2A0AE /* SongsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsTableViewController.h; sourceTree = "<group>"; };
+		F13C9E3E1C2150F000F2A0AE /* SongsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsTableViewController.m; sourceTree = "<group>"; };
+		F13C9E411C2150F000F2A0AE /* MusicNetKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicNetKit.h; sourceTree = "<group>"; };
+		F13C9E421C2150F000F2A0AE /* MusicNetKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicNetKit.m; sourceTree = "<group>"; };
+		F13C9E441C2150F000F2A0AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F13C9E461C2150F000F2A0AE /* lastSong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lastSong.png; sourceTree = "<group>"; };
+		F13C9E471C2150F000F2A0AE /* lastSong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lastSong@2x.png"; sourceTree = "<group>"; };
+		F13C9E481C2150F000F2A0AE /* nextSong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextSong.png; sourceTree = "<group>"; };
+		F13C9E491C2150F000F2A0AE /* nextSong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextSong@2x.png"; sourceTree = "<group>"; };
+		F13C9E4A1C2150F000F2A0AE /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		F13C9E4B1C2150F000F2A0AE /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@2x.png"; sourceTree = "<group>"; };
+		F13C9E4C1C2150F000F2A0AE /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		F13C9E4D1C2150F000F2A0AE /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		F13C9E4E1C2150F000F2A0AE /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		F13C9E4F1C2150F000F2A0AE /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
+		F13C9E511C2150F000F2A0AE /* GGArtistViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGArtistViewModel.h; sourceTree = "<group>"; };
+		F13C9E521C2150F000F2A0AE /* GGArtistViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGArtistViewModel.m; sourceTree = "<group>"; };
+		F13C9E531C2150F000F2A0AE /* GGSongViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGSongViewModel.h; sourceTree = "<group>"; };
+		F13C9E541C2150F000F2A0AE /* GGSongViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGSongViewModel.m; sourceTree = "<group>"; };
+		F13C9E561C2150F000F2A0AE /* XBSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBSlidingViewController.h; sourceTree = "<group>"; };
+		F13C9E571C2150F000F2A0AE /* XBSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBSlidingViewController.m; sourceTree = "<group>"; };
+		F13C9E6F1C21513D00F2A0AE /* GuaGuaMusic.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuaGuaMusic.pch; sourceTree = "<group>"; };
+		F1BE3B471C2D157F00AE6647 /* GlobalPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalPlayer.h; sourceTree = "<group>"; };
+		F1BE3B481C2D157F00AE6647 /* GlobalPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalPlayer.m; sourceTree = "<group>"; };
+		F1DAE9C31C30D2C400D9D50D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		F1DAE9C91C31198300D9D50D /* SongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongModel.h; sourceTree = "<group>"; };
+		F1DAE9CA1C31198300D9D50D /* SongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongModel.m; sourceTree = "<group>"; };
+		F1DAE9CC1C3123F100D9D50D /* UIViewController+MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBProgressHUD.h"; sourceTree = "<group>"; };
+		F1DAE9CD1C3123F100D9D50D /* UIViewController+MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBProgressHUD.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F13C9DF21C21504400F2A0AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DAE9C51C30D35800D9D50D /* CoreFoundation.framework in Frameworks */,
+				DFE8F906ED951601F8BC4CF9 /* libPods-GuaGuaMusic.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13C9E0B1C21504400F2A0AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13C9E161C21504400F2A0AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0ABC41B8DE5671B7A2E6DF25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA9B77D2A12534FE9199AB6D /* Pods-GuaGuaMusic.debug.xcconfig */,
+				50041070E5C75494BCD26E16 /* Pods-GuaGuaMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90DDFDAE0EACFFE71A24B957 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1DAE9C31C30D2C400D9D50D /* CoreFoundation.framework */,
+				38FABF5C0BD913F914292104 /* libPods-GuaGuaMusic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F13C9DEC1C21504400F2A0AE = {
+			isa = PBXGroup;
+			children = (
+				F1DAE9C81C31197400D9D50D /* model */,
+				F13C9E2C1C2150F000F2A0AE /* category */,
+				F13C9E331C2150F000F2A0AE /* common */,
+				F13C9E351C2150F000F2A0AE /* controller */,
+				F13C9E3F1C2150F000F2A0AE /* network */,
+				F13C9E431C2150F000F2A0AE /* resource */,
+				F13C9E501C2150F000F2A0AE /* viewModel */,
+				F13C9E551C2150F000F2A0AE /* xbvendor */,
+				F13C9DF71C21504400F2A0AE /* GuaGuaMusic */,
+				F13C9E111C21504400F2A0AE /* GuaGuaMusicTests */,
+				F13C9E1C1C21504400F2A0AE /* GuaGuaMusicUITests */,
+				F13C9DF61C21504400F2A0AE /* Products */,
+				0ABC41B8DE5671B7A2E6DF25 /* Pods */,
+				90DDFDAE0EACFFE71A24B957 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F13C9DF61C21504400F2A0AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9DF51C21504400F2A0AE /* GuaGuaMusic.app */,
+				F13C9E0E1C21504400F2A0AE /* GuaGuaMusicTests.xctest */,
+				F13C9E191C21504400F2A0AE /* GuaGuaMusicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F13C9DF71C21504400F2A0AE /* GuaGuaMusic */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9DFB1C21504400F2A0AE /* AppDelegate.h */,
+				F13C9DFC1C21504400F2A0AE /* AppDelegate.m */,
+				F13C9E041C21504400F2A0AE /* Assets.xcassets */,
+				F13C9E091C21504400F2A0AE /* Info.plist */,
+				F13C9DF81C21504400F2A0AE /* Supporting Files */,
+			);
+			path = GuaGuaMusic;
+			sourceTree = "<group>";
+		};
+		F13C9DF81C21504400F2A0AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E6F1C21513D00F2A0AE /* GuaGuaMusic.pch */,
+				F13C9DF91C21504400F2A0AE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F13C9E111C21504400F2A0AE /* GuaGuaMusicTests */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E121C21504400F2A0AE /* GuaGuaMusicTests.m */,
+				F13C9E141C21504400F2A0AE /* Info.plist */,
+			);
+			path = GuaGuaMusicTests;
+			sourceTree = "<group>";
+		};
+		F13C9E1C1C21504400F2A0AE /* GuaGuaMusicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E1D1C21504400F2A0AE /* GuaGuaMusicUITests.m */,
+				F13C9E1F1C21504400F2A0AE /* Info.plist */,
+			);
+			path = GuaGuaMusicUITests;
+			sourceTree = "<group>";
+		};
+		F13C9E2C1C2150F000F2A0AE /* category */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E2D1C2150F000F2A0AE /* Foundation */,
+				F13C9E301C2150F000F2A0AE /* UIKit */,
+			);
+			name = category;
+			path = GuaGuaMusic/category;
+			sourceTree = "<group>";
+		};
+		F13C9E2D1C2150F000F2A0AE /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E2E1C2150F000F2A0AE /* NSString+Common.h */,
+				F13C9E2F1C2150F000F2A0AE /* NSString+Common.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F13C9E301C2150F000F2A0AE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E311C2150F000F2A0AE /* UIView+Frame.h */,
+				F13C9E321C2150F000F2A0AE /* UIView+Frame.m */,
+				F1DAE9CC1C3123F100D9D50D /* UIViewController+MBProgressHUD.h */,
+				F1DAE9CD1C3123F100D9D50D /* UIViewController+MBProgressHUD.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F13C9E331C2150F000F2A0AE /* common */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E341C2150F000F2A0AE /* Common.h */,
+				F1BE3B471C2D157F00AE6647 /* GlobalPlayer.h */,
+				F1BE3B481C2D157F00AE6647 /* GlobalPlayer.m */,
+			);
+			name = common;
+			path = GuaGuaMusic/common;
+			sourceTree = "<group>";
+		};
+		F13C9E351C2150F000F2A0AE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E361C2150F000F2A0AE /* ArtistsTableViewController.h */,
+				F13C9E371C2150F000F2A0AE /* ArtistsTableViewController.m */,
+				F13C9E381C2150F000F2A0AE /* LrcRemoteViewController.h */,
+				F13C9E391C2150F000F2A0AE /* LrcRemoteViewController.m */,
+				F13C9E3A1C2150F000F2A0AE /* LrcRemoteViewController.xib */,
+				F13C9E3B1C2150F000F2A0AE /* SearchViewController.h */,
+				F13C9E3C1C2150F000F2A0AE /* SearchViewController.m */,
+				F13C9E3D1C2150F000F2A0AE /* SongsTableViewController.h */,
+				F13C9E3E1C2150F000F2A0AE /* SongsTableViewController.m */,
+			);
+			name = controller;
+			path = GuaGuaMusic/controller;
+			sourceTree = "<group>";
+		};
+		F13C9E3F1C2150F000F2A0AE /* network */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E401C2150F000F2A0AE /* music */,
+			);
+			name = network;
+			path = GuaGuaMusic/network;
+			sourceTree = "<group>";
+		};
+		F13C9E401C2150F000F2A0AE /* music */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E411C2150F000F2A0AE /* MusicNetKit.h */,
+				F13C9E421C2150F000F2A0AE /* MusicNetKit.m */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
+		F13C9E431C2150F000F2A0AE /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E441C2150F000F2A0AE /* Default-568h@2x.png */,
+				F13C9E451C2150F000F2A0AE /* musicIcon */,
+			);
+			name = resource;
+			path = GuaGuaMusic/resource;
+			sourceTree = "<group>";
+		};
+		F13C9E451C2150F000F2A0AE /* musicIcon */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E461C2150F000F2A0AE /* lastSong.png */,
+				F13C9E471C2150F000F2A0AE /* lastSong@2x.png */,
+				F13C9E481C2150F000F2A0AE /* nextSong.png */,
+				F13C9E491C2150F000F2A0AE /* nextSong@2x.png */,
+				F13C9E4A1C2150F000F2A0AE /* pause.png */,
+				F13C9E4B1C2150F000F2A0AE /* pause@2x.png */,
+				F13C9E4C1C2150F000F2A0AE /* play.png */,
+				F13C9E4D1C2150F000F2A0AE /* play@2x.png */,
+				F13C9E4E1C2150F000F2A0AE /* stop.png */,
+				F13C9E4F1C2150F000F2A0AE /* stop@2x.png */,
+			);
+			path = musicIcon;
+			sourceTree = "<group>";
+		};
+		F13C9E501C2150F000F2A0AE /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E511C2150F000F2A0AE /* GGArtistViewModel.h */,
+				F13C9E521C2150F000F2A0AE /* GGArtistViewModel.m */,
+				F13C9E531C2150F000F2A0AE /* GGSongViewModel.h */,
+				F13C9E541C2150F000F2A0AE /* GGSongViewModel.m */,
+				F13944841C321E3400387C10 /* ResponseViewModel.h */,
+				F13944851C321E3400387C10 /* ResponseViewModel.m */,
+			);
+			name = viewModel;
+			path = GuaGuaMusic/viewModel;
+			sourceTree = "<group>";
+		};
+		F13C9E551C2150F000F2A0AE /* xbvendor */ = {
+			isa = PBXGroup;
+			children = (
+				F13C9E561C2150F000F2A0AE /* XBSlidingViewController.h */,
+				F13C9E571C2150F000F2A0AE /* XBSlidingViewController.m */,
+			);
+			name = xbvendor;
+			path = GuaGuaMusic/xbvendor;
+			sourceTree = "<group>";
+		};
+		F1DAE9C81C31197400D9D50D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F1DAE9C91C31198300D9D50D /* SongModel.h */,
+				F1DAE9CA1C31198300D9D50D /* SongModel.m */,
+			);
+			name = model;
+			path = GuaGuaMusic/model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F13C9DF41C21504400F2A0AE /* GuaGuaMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13C9E221C21504400F2A0AE /* Build configuration list for PBXNativeTarget "GuaGuaMusic" */;
+			buildPhases = (
+				E4BDF16B5C9CEB072620E71E /* Check Pods Manifest.lock */,
+				F13C9DF11C21504400F2A0AE /* Sources */,
+				F13C9DF21C21504400F2A0AE /* Frameworks */,
+				11E6D9F9E5A559557ADC83BF /* Copy Pods Resources */,
+				F13C9DF31C21504400F2A0AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GuaGuaMusic;
+			productName = GuaGuaMusic;
+			productReference = F13C9DF51C21504400F2A0AE /* GuaGuaMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F13C9E0D1C21504400F2A0AE /* GuaGuaMusicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13C9E251C21504400F2A0AE /* Build configuration list for PBXNativeTarget "GuaGuaMusicTests" */;
+			buildPhases = (
+				F13C9E0A1C21504400F2A0AE /* Sources */,
+				F13C9E0B1C21504400F2A0AE /* Frameworks */,
+				F13C9E0C1C21504400F2A0AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F13C9E101C21504400F2A0AE /* PBXTargetDependency */,
+			);
+			name = GuaGuaMusicTests;
+			productName = GuaGuaMusicTests;
+			productReference = F13C9E0E1C21504400F2A0AE /* GuaGuaMusicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F13C9E181C21504400F2A0AE /* GuaGuaMusicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13C9E281C21504400F2A0AE /* Build configuration list for PBXNativeTarget "GuaGuaMusicUITests" */;
+			buildPhases = (
+				F13C9E151C21504400F2A0AE /* Sources */,
+				F13C9E161C21504400F2A0AE /* Frameworks */,
+				F13C9E171C21504400F2A0AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F13C9E1B1C21504400F2A0AE /* PBXTargetDependency */,
+			);
+			name = GuaGuaMusicUITests;
+			productName = GuaGuaMusicUITests;
+			productReference = F13C9E191C21504400F2A0AE /* GuaGuaMusicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F13C9DED1C21504400F2A0AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = xxb;
+				TargetAttributes = {
+					F13C9DF41C21504400F2A0AE = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4C29NUCE35;
+					};
+					F13C9E0D1C21504400F2A0AE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F13C9DF41C21504400F2A0AE;
+					};
+					F13C9E181C21504400F2A0AE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F13C9DF41C21504400F2A0AE;
+					};
+				};
+			};
+			buildConfigurationList = F13C9DF01C21504400F2A0AE /* Build configuration list for PBXProject "GuaGuaMusic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F13C9DEC1C21504400F2A0AE;
+			productRefGroup = F13C9DF61C21504400F2A0AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F13C9DF41C21504400F2A0AE /* GuaGuaMusic */,
+				F13C9E0D1C21504400F2A0AE /* GuaGuaMusicTests */,
+				F13C9E181C21504400F2A0AE /* GuaGuaMusicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F13C9DF31C21504400F2A0AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13C9E5D1C2150F000F2A0AE /* LrcRemoteViewController.xib in Resources */,
+				F13C9E641C2150F000F2A0AE /* nextSong.png in Resources */,
+				F13C9E691C2150F000F2A0AE /* play@2x.png in Resources */,
+				F13C9E651C2150F000F2A0AE /* nextSong@2x.png in Resources */,
+				F13C9E621C2150F000F2A0AE /* lastSong.png in Resources */,
+				F13C9E611C2150F000F2A0AE /* Default-568h@2x.png in Resources */,
+				F13C9E6B1C2150F000F2A0AE /* stop@2x.png in Resources */,
+				F13C9E661C2150F000F2A0AE /* pause.png in Resources */,
+				F13C9E681C2150F000F2A0AE /* play.png in Resources */,
+				F13C9E671C2150F000F2A0AE /* pause@2x.png in Resources */,
+				F13C9E6A1C2150F000F2A0AE /* stop.png in Resources */,
+				F13C9E051C21504400F2A0AE /* Assets.xcassets in Resources */,
+				F13C9E631C2150F000F2A0AE /* lastSong@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13C9E0C1C21504400F2A0AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13C9E171C21504400F2A0AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11E6D9F9E5A559557ADC83BF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuaGuaMusic/Pods-GuaGuaMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4BDF16B5C9CEB072620E71E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F13C9DF11C21504400F2A0AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13C9E601C2150F000F2A0AE /* MusicNetKit.m in Sources */,
+				F13C9E5A1C2150F000F2A0AE /* UIView+Frame.m in Sources */,
+				F1DAE9CE1C3123F100D9D50D /* UIViewController+MBProgressHUD.m in Sources */,
+				F13C9DFD1C21504400F2A0AE /* AppDelegate.m in Sources */,
+				F13C9E6C1C2150F000F2A0AE /* GGArtistViewModel.m in Sources */,
+				F13C9E591C2150F000F2A0AE /* NSString+Common.m in Sources */,
+				F13C9E5B1C2150F000F2A0AE /* ArtistsTableViewController.m in Sources */,
+				F1DAE9CB1C31198300D9D50D /* SongModel.m in Sources */,
+				F13C9E5C1C2150F000F2A0AE /* LrcRemoteViewController.m in Sources */,
+				F13944861C321E3400387C10 /* ResponseViewModel.m in Sources */,
+				F1BE3B491C2D157F00AE6647 /* GlobalPlayer.m in Sources */,
+				F13C9E6E1C2150F000F2A0AE /* XBSlidingViewController.m in Sources */,
+				F13C9DFA1C21504400F2A0AE /* main.m in Sources */,
+				F13C9E5F1C2150F000F2A0AE /* SongsTableViewController.m in Sources */,
+				F13C9E5E1C2150F000F2A0AE /* SearchViewController.m in Sources */,
+				F13C9E6D1C2150F000F2A0AE /* GGSongViewModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13C9E0A1C21504400F2A0AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13C9E131C21504400F2A0AE /* GuaGuaMusicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13C9E151C21504400F2A0AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13C9E1E1C21504400F2A0AE /* GuaGuaMusicUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F13C9E101C21504400F2A0AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F13C9DF41C21504400F2A0AE /* GuaGuaMusic */;
+			targetProxy = F13C9E0F1C21504400F2A0AE /* PBXContainerItemProxy */;
+		};
+		F13C9E1B1C21504400F2A0AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F13C9DF41C21504400F2A0AE /* GuaGuaMusic */;
+			targetProxy = F13C9E1A1C21504400F2A0AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F13C9E201C21504400F2A0AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F13C9E211C21504400F2A0AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F13C9E231C21504400F2A0AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA9B77D2A12534FE9199AB6D /* Pods-GuaGuaMusic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = GuaGuaMusic/GuaGuaMusic.pch;
+				INFOPLIST_FILE = GuaGuaMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.watermellon.GuaGuaMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		F13C9E241C21504400F2A0AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50041070E5C75494BCD26E16 /* Pods-GuaGuaMusic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = GuaGuaMusic/GuaGuaMusic.pch;
+				INFOPLIST_FILE = GuaGuaMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.watermellon.GuaGuaMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		F13C9E261C21504400F2A0AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GuaGuaMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.watermellon.GuaGuaMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuaGuaMusic.app/GuaGuaMusic";
+			};
+			name = Debug;
+		};
+		F13C9E271C21504400F2A0AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GuaGuaMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.watermellon.GuaGuaMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuaGuaMusic.app/GuaGuaMusic";
+			};
+			name = Release;
+		};
+		F13C9E291C21504400F2A0AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GuaGuaMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.watermellon.GuaGuaMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GuaGuaMusic;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F13C9E2A1C21504400F2A0AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GuaGuaMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.watermellon.GuaGuaMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GuaGuaMusic;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F13C9DF01C21504400F2A0AE /* Build configuration list for PBXProject "GuaGuaMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13C9E201C21504400F2A0AE /* Debug */,
+				F13C9E211C21504400F2A0AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F13C9E221C21504400F2A0AE /* Build configuration list for PBXNativeTarget "GuaGuaMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13C9E231C21504400F2A0AE /* Debug */,
+				F13C9E241C21504400F2A0AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F13C9E251C21504400F2A0AE /* Build configuration list for PBXNativeTarget "GuaGuaMusicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13C9E261C21504400F2A0AE /* Debug */,
+				F13C9E271C21504400F2A0AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F13C9E281C21504400F2A0AE /* Build configuration list for PBXNativeTarget "GuaGuaMusicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13C9E291C21504400F2A0AE /* Debug */,
+				F13C9E2A1C21504400F2A0AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F13C9DED1C21504400F2A0AE /* Project object */;
+}
