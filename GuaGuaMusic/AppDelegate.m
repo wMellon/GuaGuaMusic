@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "SearchViewController.h"
 #import "GlobalPlayer.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -27,12 +28,26 @@
     [self.window makeKeyAndVisible];
     NSString* path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
     NSLog(@"%@", path);
+    //后台播放音乐设置
+    NSError* error;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    if ([GlobalPlayer state] == STKAudioPlayerStatePlaying||[GlobalPlayer state] == STKAudioPlayerStateBuffering||[GlobalPlayer state] == STKAudioPlayerStatePaused ||[GlobalPlayer state] == STKAudioPlayerStateStopped) {
+        //有音乐播放时，才给后台权限，不做流氓应用。
+        [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+        [self becomeFirstResponder];
+    }
+    else
+    {
+        [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+        [self resignFirstResponder];
+    }
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {

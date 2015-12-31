@@ -58,6 +58,9 @@
 +(double)progress{
     return [self player].audioPlayer.progress;
 }
++(STKAudioPlayerState)state{
+    return [self player].audioPlayer.state;
+}
 
 #pragma mark STKAudioPlayerDelegate
 

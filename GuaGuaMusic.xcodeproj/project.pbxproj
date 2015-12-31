@@ -441,6 +441,11 @@
 					F13C9DF41C21504400F2A0AE = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 4C29NUCE35;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					F13C9E0D1C21504400F2A0AE = {
 						CreatedOnToolsVersion = 7.2;

@@ -26,6 +26,6 @@
 
 +(double)duration;
 +(double)progress;
-
++(STKAudioPlayerState)state;
 
 @end

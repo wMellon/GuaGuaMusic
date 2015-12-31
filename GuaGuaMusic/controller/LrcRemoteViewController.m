@@ -16,6 +16,7 @@
 
 @interface LrcRemoteViewController (){
     BOOL isPause;
+    int currentIndex;
     
     NSString *_songLink;
     NSString *_songLrcLink;
@@ -31,7 +32,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 
-@property (weak, nonatomic) IBOutlet UIScrollView *lrcScrollView;
+@property (strong, nonatomic) UIScrollView *lrcScrollView;
+@property (strong, nonatomic) UIView *lrcView;
 
 @property (strong, nonatomic) NSTimer *timer;
 
@@ -44,12 +46,20 @@
 -(void)commonInit{
     
     isPause = YES;
+    currentIndex = -1;
     
     //slider设置
     _slider.value = 0.0;
     
+    _lrcScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(20, 80, SCREEN_WIDTH - 40, 300)];
     //禁止手动拉动
     _lrcScrollView.userInteractionEnabled = NO;
+    [self.view addSubview:_lrcScrollView];
+    
+    _lrcView = [[UIView alloc] init];
+    _lrcView.clipsToBounds = YES;    //view超出scrollview隐藏
+    [_lrcScrollView addSubview:_lrcView];
+    [_lrcScrollView setContentOffset:CGPointMake(0, 0)];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(playProgress) userInfo:nil repeats:YES];
     
@@ -69,6 +79,8 @@
     [self commonInit];
     //当前在播放的是否是同一首歌
     if([[GlobalPlayer player].currentSong.songId isEqualToString:_songId]){
+        //先停止计时
+        [_timer setFireDate:[NSDate distantFuture]];
         //设置歌词滚动高度
         _timeArray = [GlobalPlayer player].currentSong.songTimeArray;
         _lrcArray = [GlobalPlayer player].currentSong.songLrcArray;
@@ -190,13 +202,14 @@
 
 -(void)setupLrcScrollView:(NSMutableArray*)timeArray and:(NSMutableArray*)lrcArray{
     //设置歌词滚动高度
-    _lrcScrollView.contentSize = CGSizeMake(_lrcScrollView.width, timeArray.count * lineHeight);
+    _lrcView.frame = CGRectMake(0, 0, _lrcScrollView.width, timeArray.count * lineHeight + _lrcScrollView.height / 2);
+    _lrcScrollView.contentSize = CGSizeMake(_lrcScrollView.width, _lrcView.height);
     for(int i = 0; i < timeArray.count; i++){
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, i * lineHeight + _lrcScrollView.height / 2, _lrcScrollView.width, lineHeight)];
         label.textAlignment = NSTextAlignmentCenter;
         label.text = lrcArray[i];
         label.font = [UIFont systemFontOfSize:14.0];
-        [_lrcScrollView addSubview:label];
+        [_lrcView addSubview:label];
         [_lrcLabelArray addObject:label];
     }
 }
@@ -235,20 +248,25 @@
 //    }
     
     int x = GlobalPlayer.progress * 100;//＊100，lrc分割时时间的最小单位是0.01s
-    if(_timeArray.count > 0){
+    if(_timeArray.count > 0 && _lrcLabelArray.count > 0){
         for(int i = 0; i < _timeArray.count - 1; i++){
             int a = [self getNumFromTimeStr:_timeArray[i]];
             int b = [self getNumFromTimeStr:_timeArray[i + 1]];
             //显示的歌词必须是在[a,b}之间
             if(x >= a && x < b){
-                //将之前突出的label重置
-                if(i != 0){
-                    UILabel *label = _lrcLabelArray[i - 1];
-                    label.textColor = [UIColor blackColor];
+                if(currentIndex == -1 || currentIndex != i){
+                    //将之前突出的label重置
+                    if(i != 0){
+                        UILabel *label = _lrcLabelArray[i - 1];
+                        label.textColor = [UIColor blackColor];
+                    }
+                    UILabel *label = _lrcLabelArray[i];
+                    label.textColor = [UIColor redColor];
+                    [_lrcScrollView setContentOffset:CGPointMake(0, i * lineHeight) animated:YES];
+//                    _lrcView.top = _lrcView.top - lineHeight;
+//                    NSLog(@"%f", _lrcView.top);
+                    currentIndex = i;
                 }
-                UILabel *label = _lrcLabelArray[i];
-                label.textColor = [UIColor redColor];
-                [_lrcScrollView setContentOffset:CGPointMake(0, i * lineHeight) animated:YES];
             }
         }
     }
@@ -306,6 +324,7 @@
     isPause = !isPause;
     //状态为点击后的状态
     if(isPause){
+        [_timer setFireDate:[NSDate distantFuture]];
         [GlobalPlayer pause];
         [_playBtn setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     }else{
